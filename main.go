@@ -70,15 +70,7 @@ func ShowCustomers(w http.ResponseWriter, r *http.Request){
 		
 	}
 func main(){
-	/*
-	Features --->>>>>>
-Read customer details ie name,balance,account number
-Show customer details
-Add new customer
-Find customer by account number
-Delete customer details 
-Update customer details
-	*/
+
 	customers = append(customers,Customer{Name:"Ben San",Gender:"Male",Balance:100,AccountNumber:1234})
 	router := mux.NewRouter();
     router.HandleFunc("/ShowAll",ShowCustomers).Methods("GET")
